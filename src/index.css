@@ -1,0 +1,15 @@
+/* basic styling for the entire app */
+:root {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+/* keeps buttons consistent */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
