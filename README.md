@@ -1,8 +1,10 @@
 # Inventory Hub - Frontend
 
-Inventory Hub is an inventory management application that allows
-users to create accounts, manage their own inventory, and browse
-items listed by other users.
+Inventory Hub is an inventory management application that allows users to create accounts, manage their own inventory, and browse items listed by other users.
+
+## Live Application
+
+https://inventory-hub-frontend-chi.vercel.app
 
 ## Technologies
 
@@ -50,20 +52,15 @@ Start the frontend:
 npm run dev
 ```
 
-Open the application in your browser:
+Open the application at:
 
 http://localhost:5173
 
-## Environment Configuration
+## API Configuration
 
-The frontend automatically connects to the local API on port 3000.
+During local development, the frontend connects to the backend API on port 3000 using the current hostname.
 
-To use a different API URL, create a `.env` file in the
-frontend directory:
-
-```env
-VITE_API_URL=http://localhost:3000/api
-```
+In production, API requests use the `/api` path. Vercel rewrites these requests to the deployed backend API.
 
 ## Production Build
 
@@ -71,21 +68,14 @@ VITE_API_URL=http://localhost:3000/api
 npm run build
 ```
 
+## Deployment
+
+The frontend is deployed using Vercel.
+
+Frontend: https://inventory-hub-frontend-chi.vercel.app
+
+Backend API: https://inventory-hub-api.onrender.com
+
 ## Backend Repository
 
-https://github.com/calebmcintyre8501/inventory-hub-api# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://github.com/calebmcintyre8501/inventory-hub-api
