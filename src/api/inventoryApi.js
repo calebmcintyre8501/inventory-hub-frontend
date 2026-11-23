@@ -1,6 +1,7 @@
-// these requests were originally in App.jsx lines 37-267
 // moved the fetch stuff here so the page doesnt have all the urls in it
-const API = import.meta.env.VITE_API_URL || `http://${window.location.hostname}:3000/api`;
+const API = import.meta.env.PROD
+  ? "/api"
+  : `http://${window.location.hostname}:3000/api`;
 
 export const getItems = () => fetch(`${API}/items`);
 export const getMyItems = () => fetch(`${API}/my-items`, { credentials: "include" });
